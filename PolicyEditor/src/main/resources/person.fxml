@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.PolicyEditorBackend.PolicyEditor.controllers.PersonControllerView">
+    <TableView fx:id="personTable">
+        <columns>
+            <TableColumn text="ID" minWidth="50" prefWidth="50" editable="false">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Name" minWidth="100" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Age" minWidth="50" prefWidth="50">
+                <cellValueFactory>
+                    <PropertyValueFactory property="age" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Email" minWidth="100" prefWidth="300">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <HBox spacing="5" >
+        <Button text="Refresh" onAction="#onRefreshButtonClick" />
+    </HBox>
+</VBox>
